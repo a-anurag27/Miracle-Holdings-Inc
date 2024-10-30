@@ -4,7 +4,7 @@ terraform {
     bucket               = "miracleholdings-inc-anurag"
     workspace_key_prefix = "terraform-states/cost-insight"
     key                  = "terraform.tfstate"
-    region               = "us-west-2"
+    region               = "us-west-1"
   }
   required_providers {
     aws = {
