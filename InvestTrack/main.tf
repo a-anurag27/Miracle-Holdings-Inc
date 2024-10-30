@@ -1,7 +1,7 @@
 terraform {
 
   backend "s3" {
-    bucket = "miracleholdings-inc"
+    bucket = "miracleholdings-inc-anurag"
     key    = "terraform-states/invest-track/terraform.tfstate"
     region = "us-west-2"
   }
