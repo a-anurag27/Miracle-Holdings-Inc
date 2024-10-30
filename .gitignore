@@ -1,8 +1,7 @@
 # Local .terraform directories
 **/.terraform/*
 
-/LocalApplication/*
-/LocalApplication/main.tf
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
@@ -36,6 +35,7 @@ override.tf.json
 terraform.rc
 CreditBoost/.terraform.lock.hcl
 InvestTrack/.terraform.lock.hcl
+InvestTrack/InstitutionalTrack/.terraform.lock.hcl
 CostInsight/.terraform.lock.hcl
 
 .vscode/
