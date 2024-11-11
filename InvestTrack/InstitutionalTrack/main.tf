@@ -1,14 +1,17 @@
 terraform {
 
-  backend "s3" {
-    bucket = "miracleholdings-inc-anurag"
-    key    = "terraform-states/invest-track/institutional-track/terraform.tfstate"
-    region = "us-west-1"
-  }
   required_providers {
     aws = {
       version = ">= 5.39.0"
       source  = "hashicorp/aws"
+    }
+  }
+  cloud {
+    organization = "AnuragInit"
+    hostname     = "app.terraform.io"
+    workspaces {
+      project = "invest_track_institutional_track"
+      name    = "invest_track_institutional_track_default"
     }
   }
 }

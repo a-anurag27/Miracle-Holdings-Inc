@@ -24,3 +24,10 @@ override.tf.json
 # !example_override.tf
 
 .vscode/
+
+# These lines were added by the tf-migrate CLI tool
+.terraform.lock.*
+_hcp-migrate-configs/
+_hcp-migrate-configs-*/
+!_hcp-migrate-configs*/terraform.tfstate*
+**/.terraform/*
