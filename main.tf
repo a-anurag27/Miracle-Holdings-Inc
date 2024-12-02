@@ -1,3 +1,8 @@
+variable "environment" {
+  description = "Environment for the AWS IAM role"
+  type        = string
+  default     = "dev"
+}
 terraform {
 
   backend "s3" {
@@ -36,6 +41,7 @@ resource "aws_iam_role" "very-secure-role-miracle" {
     createdBy     = "terraform"
     terraformTime = "${timestamp()}"
     CanDelete     = "true"
-    product       = "credit-boost"
+    product       = "MiracleHoldings"
+    environment   = var.environment
   }
 }
