@@ -18,6 +18,15 @@ provider "aws" {
   region = "us-west-2"
 }
 
+variable "instance_types" {
+  description = "A map of AWS instance types by environment"
+  type        = map(string)
+  default = {
+    dev     = "t2.micro"
+    staging = "t2.small"
+    prod    = "t2.medium"
+  }
+}
 
 module "shared_module_consumer" {
   source           = "../Shared-Module"
