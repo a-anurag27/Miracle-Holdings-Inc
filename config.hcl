@@ -8,7 +8,7 @@ projects {
   
     workspace "default" {
       env-vars = {
-        "TF_VAR_environment": "anurag"
+        "TF_VAR_region": "anurag"
       }
     }
   

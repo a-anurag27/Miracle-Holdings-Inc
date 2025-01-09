@@ -1,7 +1,7 @@
-variable "environment" {
-  description = "Environment for the AWS IAM role"
+variable "region" {
+  description = "server region for the AWS IAM role"
   type        = string
-  default     = "dev"
+  default     = "USA"
 }
 terraform {
 
@@ -42,6 +42,6 @@ resource "aws_iam_role" "very-secure-role-miracle" {
     terraformTime = "${timestamp()}"
     CanDelete     = "true"
     product       = "MiracleHoldings"
-    environment   = var.environment
+    ServerRegion   = var.region
   }
 }
