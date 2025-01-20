@@ -1,28 +1,29 @@
-skip-dirs = ["CostInsight", "InvestTrack", "."]
+skip-dir = [ "InvestTrack", "InvestTrack/InstitutionalTrack", "CostInsight", ".", "CreditBoost"]
 
-projects {
-
-  // can also give project as . for root level or full abs path
-  project "." {
-
-  
-    workspace "default" {
-      env-vars = {
-        "TF_VAR_region": "anurag"
-      }
+/*
+projects = [
+    {
+        dir = "."
+        workspaces = [
+            {
+                name = "staging"
+                env-vars = {
+                    "TF_VAR_region": "Brazil"
+                }
+            },
+            {
+                name = "default"
+                terraform-vars = ["/Users/anurag/Projects/Miracle-Holdings-Inc/var-values/default.tfvars"]
+            }
+        ]
+    },
+    {
+        dir = "CostInsight"
+        workspaces = [
+            {
+                name = "default"
+                terraform-vars = ["/Users/anurag/Projects/Miracle-Holdings-Inc/CostInsight/var-values/default.tfvars.json"]
+            }
+        ]
     }
-  
-
-    workspace "staging" { 
-      terraform_vars = ["/Users/anurag/Projects/Miracle-Holdings-Inc/var-values/staging.tfvars"]
-    }
-  }
-
-
-  project "CostInsight" {
-    workspace "default" {
-      terraform_vars = ["/Users/anurag/Projects/Miracle-Holdings-Inc/CostInsight/var-values/default.tfvars.json"]
-    }
-  }
-
-}
+] */
