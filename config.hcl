@@ -1,6 +1,6 @@
-skip-dir = [ "InvestTrack", "InvestTrack/InstitutionalTrack", "CostInsight", ".", "CreditBoost"]
+// skip-dir = [ "InvestTrack", "InvestTrack/InstitutionalTrack", "CostInsight", ".", "CreditBoost"]
 
-/*
+
 projects = [
     {
         dir = "."
@@ -26,4 +26,4 @@ projects = [
             }
         ]
     }
-] */
+] 
