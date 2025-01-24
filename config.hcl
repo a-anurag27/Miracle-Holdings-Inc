@@ -1,4 +1,4 @@
-// skip-dir = [ "InvestTrack", "InvestTrack/InstitutionalTrack", "CostInsight", ".", "CreditBoost"]
+// skip-dir = []
 
 
 projects = [
@@ -17,13 +17,4 @@ projects = [
             }
         ]
     },
-    {
-        dir = "CostInsight"
-        workspaces = [
-            {
-                name = "default"
-                terraform-vars = ["/Users/anurag/Projects/Miracle-Holdings-Inc/CostInsight/var-values/default.tfvars.json"]
-            }
-        ]
-    }
 ] 
