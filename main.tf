@@ -1,14 +1,17 @@
 terraform {
 
-  backend "s3" {
-    bucket = "miracleholdings-inc-anurag"
-    key    = "terraform-states/miracle/terraform.tfstate"
-    region = "us-west-1"
-  }
   required_providers {
     aws = {
       version = ">= 5.39.0"
       source  = "hashicorp/aws"
+    }
+  }
+  cloud {
+    organization = "AnuragInit"
+    hostname     = "app.terraform.io"
+    workspaces {
+      project = "miracle_holdings_inc"
+      tags    = ["miracle_holdings_inc"]
     }
   }
 }
@@ -37,6 +40,6 @@ resource "aws_iam_role" "very-secure-role-miracle" {
     terraformTime = "${timestamp()}"
     CanDelete     = "true"
     product       = "MiracleHoldings"
-    ServerRegion   = var.region
+    ServerRegion  = var.region
   }
 }
